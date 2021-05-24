@@ -51,5 +51,43 @@ isEven n = mod n 2 == 0
 onlyEven :: [Int] -> [Int]
 onlyEven x = filter isEven x 
 
--- 6)
 
+-- 6)
+-- testa se 60 < x < 80
+between60and80 :: Int -> Bool
+between60and80 x = x > 60 && x <80
+
+-- mantem apenas os números entre 60 e 80
+onlyBetween60and80 :: [Int] -> [Int]
+onlyBetween60and80 x = filter between60and80 x
+
+
+-- 7)Conta o numero de espaços de uma String
+-- testa se um caractere é ' "
+isSpace :: Char -> Bool
+isSpace c = c == ' '
+
+-- recebe uma String e deixa apenas seus espaços
+onlySpace :: String -> String
+onlySpace str = filter isSpace str
+
+-- vê o tamanho da string recebida após passar por 'onlySpaces'
+countSpaces :: String -> Int
+countSpaces str = length (onlySpace str)
+
+
+-- 8) Cálcula a área de circulos, dado uma lista de raios
+-- calcula a área de um circulo com o seu raio
+circleArea :: Float -> Float
+circleArea r = pi*(r^2)
+
+-- aplica 'circleArea' em uma lista de raios
+calcAreas :: [Float] -> [Float]
+calcAreas x = map circleArea x
+
+
+-- 9)
+--charTest :: Char -> Bool
+
+--charFound :: Char -> String -> Bool
+--charFound x y = 
