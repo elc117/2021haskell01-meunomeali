@@ -17,9 +17,43 @@ svgCircle x y r style =
 svgAll :: String
 svgAll = 
   svgBegin 500 500 ++ 
-  (svgCircle 60 60 50 "rgb(10, 145, 32, 0.4)") ++ 
-  (svgCircle 90 90 50 "rgb(105, 14, 30, 0.4)") ++ 
+  (svgCircle 200 230 60 "rgb(255, 255, 0, 1.0)") ++
+
+  svgBegin 300 225 ++ 
+  (svgCircle 200 230 60 "rgb(255, 0, 0, 1.0)") ++ 
+  (svgCircle 200 150 50 "rgb(255, 255, 0, 1.0)") ++
+  (svgCircle 200 160 10 "rgb(0, 0, 0, 1.0)") ++
+  (svgCircle 220 140 5 "rgb(0, 0, 0, 1.0)") ++
+  (svgCircle 180 140 5 "rgb(0, 0, 0, 1.0)") ++
+
+  svgBegin 230 130 ++
+  (svgCircle 220 130 5 "rgb(0, 0, 0, 1.0)") ++
+  (svgCircle 180 130 5 "rgb(0, 0, 0, 1.0)") ++
+  (svgCircle 220 130 3 "rgb(255, 255, 0, 1.0)") ++
+  (svgCircle 180 130 3 "rgb(255, 255, 0, 1.0)") ++
+
+  svgEnd ++
+
+  svgBegin 300 300 ++
+  (svgCircle 260 210 20 "rgb(255, 255, 0, 1.0)") ++
+  (svgCircle 140 210 20 "rgb(255, 255, 0, 1.0)") ++
+
+  svgEnd ++
+
+  svgBegin 300 215 ++
+  (svgCircle 260 210 20 "rgb(255, 0, 0, 1.0)") ++
+  (svgCircle 140 210 20 "rgb(255, 0, 0, 1.0)") ++
+
+  svgEnd ++
+  svgEnd ++
+
+  (svgCircle 160 110 15 "rgb(255, 255, 0, 1.0)") ++
+  (svgCircle 240 110 15 "rgb(255, 255, 0, 1.0)") ++
+  (svgCircle 160 290 20 "rgb(255, 255, 0, 1.0)") ++
+  (svgCircle 240 290 20 "rgb(255, 255, 0, 1.0)") ++
+
   svgEnd
+
 
 main :: IO ()
 main = do
