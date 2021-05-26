@@ -89,5 +89,6 @@ calcAreas x = map circleArea x
 -- 9)
 --charTest :: Char -> Bool
 
---charFound :: Char -> String -> Bool
---charFound x y = 
+
+charFound :: Char -> String -> Bool
+charFound char str = length (filter (== char) str) > 0
